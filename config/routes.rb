@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'fitbit_auth/index'
+
+  post "/auth/fitbit" => "fitbit_auth#make_request"
+  get "/auth/fitbit/callback" => "fitbit_auth#get_response"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
